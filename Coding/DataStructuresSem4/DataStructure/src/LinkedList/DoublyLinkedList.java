@@ -23,6 +23,7 @@ public class DoublyLinkedList {
             out.print("\nList is empty");
         }
         else{
+            System.out.println("List:");
             for(Node t = head; t!=null; t = t.getNext()) //t is a reference variable
             {
                 out.print("\n"+t);
