@@ -1,6 +1,7 @@
 package HeapInJava;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class HeapSort {
     void heapify(int arr[], int n, int i){
@@ -44,8 +45,12 @@ public class HeapSort {
     }
 
     public static void main(String[] args) {
-        int arr[] = {12, 11, 13, 5, 6, 7 };
-
+        // int arr[] = {12, 11, 13, 5, 6, 7 };
+        Random r = new Random();
+        int arr[] = new int[r.nextInt(10, 21)];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = r.nextInt(1, 100);
+        }
         HeapSort hs = new HeapSort();
         System.out.println("\nBefore sorting: "+Arrays.toString(arr));
         hs.heapSort(arr);
