@@ -13,7 +13,7 @@ public class BinaryTreeDemo {
         preorder(root.getLeft());
         preorder(root.getRight());
     } 
-
+    
     public static void inorder(Node root){
         if(root == null){
             return;
