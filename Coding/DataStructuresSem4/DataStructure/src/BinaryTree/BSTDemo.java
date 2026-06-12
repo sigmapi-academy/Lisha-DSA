@@ -9,10 +9,13 @@ public class BSTDemo {
         int value, choice;
         System.out.println();
         while(true){
-            System.out.println("Press 1 to insert");
+            System.out.println("\nPress 1 to insert");
             System.out.println("Press 2 to traverse tree in Preorder");
             System.out.println("Press 3 to traverse tree in inorder");
             System.out.println("Press 4 to traverse tree in Postorder");
+            System.out.println("Press 5 to search a key");
+            System.out.println("Press 6 to delete a key");
+            
             System.out.println("Press 0 to exit");
             System.out.println("Enter your choice: ");
             choice = sc.nextInt();
@@ -31,6 +34,22 @@ public class BSTDemo {
                 case 4:
                     BinaryTreeDemo.postorder(bst.getRoot());
                     break;
+                case 5:
+                    System.out.println("\nEnter a key to search: ");
+                    int key = sc.nextInt();
+                    if(bst.search(bst.getRoot(), key)){
+                        System.out.println(key + " is present in the tree.");
+                    }
+                    else{
+                        System.out.println(key + " is not present in the tree.");
+                    }
+                    break;
+                case 6:
+                    System.out.println("\nEnter a key to delete from tree: ");
+                    key = sc.nextInt();
+                    bst.deleteNode(key);
+                    break;
+
                 case 0:
                     System.out.println("Good bye");
                     sc.close();
@@ -39,7 +58,6 @@ public class BSTDemo {
                     System.out.println("Wrong option selected!");
                     break;
             }
-
         }
         
     }
