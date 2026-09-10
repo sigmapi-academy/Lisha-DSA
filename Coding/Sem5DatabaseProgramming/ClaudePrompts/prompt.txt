@@ -1,0 +1,11 @@
+Create a database called CARSHOWROOM Having schemas or relation or table given below with table name and attributes in parentheses along with attribute constraints.
+
+1. Inventory(CarID is Primary key, CarName, Price, Model, YearManufacture, FuelType)
+2. Customer(CustID is Primary Key, CustName, CustAddress, Email, MobileNum)
+3. Sales(InvoiceNo is Primary Key, CarID is Foreign Key, CustID Foreign Key, SaleDate, PaymentMode, EmpID is Foreign Key, SalePrice)
+4. Employee(EmpID is Primary Key, EmpName, DOB is Date, DOJ is Date, Designation, Salary, MobileNum, Email)
+
+Feed 20 records in Employee relation
+Feed 50 records in Inventory relation
+Feed 200 records in Customer relation
+Feed 50 records in Sales relation
